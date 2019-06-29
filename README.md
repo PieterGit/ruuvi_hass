@@ -14,3 +14,6 @@ sensor:
     mac: 'MA:CA:DD:RE:SS:01'
     name: 'bathroom'
 ```
+Todo:
+- Add manifest.json
+- Add more sensors (acceleration)
