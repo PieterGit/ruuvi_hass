@@ -1,0 +1,8 @@
+{
+        "domain": "ruuvi-hass",
+        "name": "RuuviTag integration for Home Assistant",
+        "documentation": "https://github.com/salleq/ruuvi_hass",
+        "requirements": ["ruuvitag-sensor"],
+        "dependencies": [],
+        "codeowners": ["@JonasR"]
+}
