@@ -16,5 +16,4 @@ sensor:
     name: 'bathroom'
 ```
 Todo:
-- Add manifest.json
 - Add more sensors (acceleration)
