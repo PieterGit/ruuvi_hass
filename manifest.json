@@ -5,6 +5,6 @@
         "requirements": ["ruuvitag-sensor"],
         "dependencies": [],
         "config_flow": false,
-        "codeowners": ["@JonasR", "@salleq", "@PieterGit"]
+        "codeowners": ["@JonasR", "@salleq", "@PieterGit"],
         "homeassistant": "0.100.1"
 }
