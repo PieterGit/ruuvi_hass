@@ -64,7 +64,7 @@ def setup_platform(hass, config, add_devices, discovery_info=None):
             prefix = config.get(CONF_NAME, mac_address)
             name = "{} {}".format(prefix, condition)
             _LOGGER.info("setup_platform for RuuviTag %s" % name)
-            devs.append(RuuviTagSensor(
+            devs.append(RuuviSensor(
                 probe, config.get(CONF_MAC), condition, name
             ))
     add_devices(devs)
@@ -91,7 +91,7 @@ class RuuviProbe(object):
         self.last_poll = datetime.datetime.now()
 
 
-class RuuviTagSensor(Entity):
+class RuuviSensor(Entity):
     """Representation of the RuuviTag Sensor."""
     def __init__(self, poller, mac_address, sensor_type, name):
         self.poller = poller
