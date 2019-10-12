@@ -4,7 +4,7 @@
         "documentation": "https://github.com/salleq/ruuvi_hass",
         "requirements": ["ruuvitag-sensor"],
         "dependencies": [],
-        "config_flow": true,
+        "config_flow": false,
         "codeowners": ["@JonasR", "@salleq", "@PieterGit"]
         "homeassistant": "0.100.1"
 }
