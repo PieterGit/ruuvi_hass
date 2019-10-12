@@ -13,6 +13,9 @@ from homeassistant.const import (
     CONF_FORCE_UPDATE, CONF_MONITORED_CONDITIONS, CONF_NAME, CONF_MAC
 )
 
+from ruuvitag_sensor.ruuvi import RuuviTagSensor
+
+
 REQUIREMENTS = ['ruuvitag_sensor']
 
 _LOGGER = logging.getLogger(__name__)
@@ -48,10 +51,7 @@ PLATFORM_SCHEMA = PLATFORM_SCHEMA.extend({
 #    """Set up the sensor platform."""
 #    add_entities([RuuviTagSensor()])
 
-
 def setup_platform(hass, config, add_devices, discovery_info=None):
-    from ruuvitag_sensor.ruuvi import RuuviTagSensor
-
     mac_addresses = config.get(CONF_MAC)
     if not isinstance(mac_addresses, list):
         mac_addresses = [mac_addresses]
