@@ -63,7 +63,7 @@ def setup_platform(hass, config, add_devices, discovery_info=None):
         for condition in config.get(CONF_MONITORED_CONDITIONS):
             prefix = config.get(CONF_NAME, mac_address)
             name = "{} {}".format(prefix, condition)
-
+            _LOGGER.info("setup_platform for RuuviTag %s" % name)
             devs.append(RuuviTagSensor(
                 probe, config.get(CONF_MAC), condition, name
             ))
@@ -121,5 +121,4 @@ class RuuviTagSensor(Entity):
         This is the only method that should fetch new data for Home Assistant.
         """
         self.poller.poll()
-
         self._state = self.poller.conditions.get(self.mac_address, {}).get(self.sensor_type)
